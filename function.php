@@ -31,3 +31,12 @@ function btn_function( $atts = array(), $content = null ) {
   return '<button class="btn_gold_outline btn_'. $position .'" tabindex="0"><a href="'. $link .'" class="doti-button">' . $content . '</a></button>';
 }
 add_shortcode('btn', 'btn_function');
+
+/************************ */
+/* Add new menu location */
+/********************** */
+
+function pubfa_custom_new_menu() {
+  register_nav_menu('top_menu',__( 'Top menu' ));
+}
+add_action( 'init', 'pubfa_custom_new_menu' );
